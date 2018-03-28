@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sort.redesapp.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduzca la direccion de red: "
+        android:textSize="15sp"
+        android:layout_margin="2dp"
+        />
+
+    <EditText
+        android:id="@+id/primer"
+        android:layout_margin="10dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:maxLength="3"
+        android:maxLines="1"
+        />
+    <TextView
+        android:id="@+id/point1"
+        android:layout_width="wrap_content"
+        android:textSize="24sp"
+        android:text="."
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/primer"
+        android:layout_alignBaseline="@id/primer"
+        />
+
+    <EditText
+        android:id="@+id/segundo"
+        android:layout_margin="10dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/point1"
+        android:layout_alignBaseline="@id/point1"
+        android:maxLength="3"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/point2"
+        android:layout_width="wrap_content"
+        android:textSize="24sp"
+        android:text="."
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/segundo"
+        android:layout_alignBaseline="@id/segundo"
+        />
+
+    <EditText
+        android:id="@+id/tercer"
+        android:layout_margin="10dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/point2"
+        android:layout_alignBaseline="@id/point2"
+        android:maxLength="3"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/point3"
+        android:layout_width="wrap_content"
+        android:textSize="24sp"
+        android:text="."
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tercer"
+        android:layout_alignBaseline="@id/tercer"
+        />
+    <EditText
+        android:id="@+id/cuarto"
+        android:layout_margin="10dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/point3"
+        android:layout_alignBaseline="@id/point3"
+        android:maxLength="3"
+        android:maxLines="1"/>
+
+
+    <EditText
+        android:id="@+id/mascara"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:maxLength="3"
+        android:layout_toRightOf="@id/cuarto"
+        android:layout_alignBaseline="@id/cuarto"
+        android:maxLines="1"
+        />
+
+    <TextView
+        android:id="@+id/text_net_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Net ID:"
+        android:textSize="20sp"
+        android:layout_below="@id/primer"
+        android:layout_alignLeft="@id/primer"
+        />
+
+    <TextView
+        android:id="@+id/net_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_net_id"
+        android:textSize="16sp"
+        android:layout_alignLeft="@id/text_net_id"
+        />
+
+
+
+</RelativeLayout>
+
