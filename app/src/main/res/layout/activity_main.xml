@@ -104,12 +104,30 @@
 
     <TextView
         android:id="@+id/net_id"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_net_id"
         android:textSize="16sp"
         android:layout_alignLeft="@id/text_net_id"
         />
+
+    <TextView
+        android:id="@+id/broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/net_id"
+        android:text="Broadcast: "
+        android:layout_alignLeft="@id/net_id"
+        />
+
+    <TextView
+        android:id="@+id/broadcast_text"
+        android:layout_width="160dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/broadcast"
+        android:layout_alignLeft="@id/broadcast"/>
 
 
 
