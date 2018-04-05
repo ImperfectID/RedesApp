@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     TextView net;
     TextView broadcast;
+    TextView red_utilizable;
+    TextView host_number;
+    TextView red_number;
 
     Pattern p = Pattern.compile("([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])");
     Pattern n = Pattern.compile("([0-9]|[12][0-9]|3[0-2])");
@@ -101,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
 
         net = findViewById(R.id.net_id);
         broadcast = findViewById(R.id.broadcast_text);
+        red_utilizable = findViewById(R.id.cantidad_text);
+        host_number = findViewById(R.id.host_text);
+        red_number = findViewById(R.id.red_text);
 
         mascara = findViewById(R.id.mascara);
 
@@ -120,9 +126,11 @@ public class MainActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(getApplicationContext(), secuencia_mascara, Toast.LENGTH_SHORT);
                     mascara.setTextColor(Color.parseColor("#F44336"));
                     toast.show();
-                } else{
+                } else {
                     mascara.setTextColor(Color.parseColor("#81C784"));
                     int numero = Integer.parseInt(mascara.getText().toString());
+                    int redVerificador = (int)Math.pow(2,32-numero)-2;
+                    red_utilizable.setText(redVerificador+"");
                     String cadena = mascaras_red.get(numero).toString();
                     cadena2 = cadena.split("\\.");
                     oct1 = Integer.parseInt(cadena2[0]);
@@ -130,7 +138,8 @@ public class MainActivity extends AppCompatActivity {
                     oct3 = Integer.parseInt(cadena2[2]);
                     oct4 = Integer.parseInt(cadena2[3]);
 
-
+                    red_number.setText(digito1+". "+digito2);
+                    host_number.setText(digito3+" ."+digito4);
 
                     c1 = digito1 & oct1;
                     c2 = digito2 & oct2;
@@ -149,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
                     c3 = digito3 | brod_3;
                     c4 = digito4 | brod_4;
                     broadcast.setText(c1 + " ." + c2 + " ." + c3 + " ." + c4);
+
                 }
             }
             @Override
@@ -180,17 +190,20 @@ public class MainActivity extends AppCompatActivity {
                         c4 = digito4 & oct4;
                         net.setText(c1 + " ." + c2 + " ." + c3 + " ." + c4);
 
-                        oct1 = ~oct1;
-                        oct2 = ~oct2;
-                        oct3 = ~oct3;
-                        oct4 = ~oct4;
+                        brod_1 = ~oct1 & 0xff;
+                        brod_2 = ~oct2 & 0xff;
+                        brod_3 = ~oct3 & 0xff;
+                        brod_4 = ~oct4 & 0xff;
+                        System.out.println(brod_4);
 
-                        c1 = digito1 | oct1;
-                        c2 = digito2 | oct2;
-                        c3 = digito3 | oct3;
-                        c4 = digito4 | oct4;
-                        broadcast.setText(c1 + " ." + c2 + " ." + c3 + " ." + 255);
-                        }
+                        c1 = digito1 | brod_1;
+                        c2 = digito2 | brod_2;
+                        c3 = digito3 | brod_3;
+                        c4 = digito4 | brod_4;
+                        broadcast.setText(c1 + " ." + c2 + " ." + c3 + " ." + c4);
+                        red_number.setText(digito1+". "+digito2);
+                        host_number.setText(digito3+" ."+digito4);
+                    }
                     }
                 }
 
@@ -222,16 +235,19 @@ public class MainActivity extends AppCompatActivity {
                         c4 = digito4 & oct4;
                         net.setText(c1 + " ." + c2 + " ." + c3 + " ." + c4);
 
-                        oct1 = ~oct1;
-                        oct2 = ~oct2;
-                        oct3 = ~oct3;
-                        oct4 = ~oct4;
+                        brod_1 = ~oct1 & 0xff;
+                        brod_2 = ~oct2 & 0xff;
+                        brod_3 = ~oct3 & 0xff;
+                        brod_4 = ~oct4 & 0xff;
+                        System.out.println(brod_4);
 
-                        c1 = digito1 | oct1;
-                        c2 = digito2 | oct2;
-                        c3 = digito3 | oct3;
-                        c4 = digito4 | oct4;
-                        broadcast.setText(c1 + " ." + c2 + " ." + c3 + " ." + 255);
+                        c1 = digito1 | brod_1;
+                        c2 = digito2 | brod_2;
+                        c3 = digito3 | brod_3;
+                        c4 = digito4 | brod_4;
+                        broadcast.setText(c1 + " ." + c2 + " ." + c3 + " ." + c4);
+                        red_number.setText(digito1+". "+digito2);
+                        host_number.setText(digito3+" ."+digito4);
                         }
                     }
                 }
@@ -265,20 +281,22 @@ public class MainActivity extends AppCompatActivity {
                         c4 = digito4 & oct4;
                         net.setText(c1 + " ." + c2 + " ." + c3 + " ." + c4);
 
-                        oct1 = ~oct1;
-                        oct2 = ~oct2;
-                        oct3 = ~oct3;
-                        oct4 = ~oct4;
+                        brod_1 = ~oct1 & 0xff;
+                        brod_2 = ~oct2 & 0xff;
+                        brod_3 = ~oct3 & 0xff;
+                        brod_4 = ~oct4 & 0xff;
+                        System.out.println(brod_4);
 
-                        c1 = digito1 | oct1;
-                        c2 = digito2 | oct2;
-                        c3 = digito3 | oct3;
-                        c4 = digito4 | oct4;
-                        broadcast.setText(c1 + " ." + c2 + " ." + c3 + " ." + 255);
+                        c1 = digito1 | brod_1;
+                        c2 = digito2 | brod_2;
+                        c3 = digito3 | brod_3;
+                        c4 = digito4 | brod_4;
+                        broadcast.setText(c1 + " ." + c2 + " ." + c3 + " ." + c4);
+                        red_number.setText(digito1+". "+digito2);
+                        host_number.setText(digito3+" ."+digito4);
                         }
                     }
                 }
-
 
 
             @Override
@@ -308,16 +326,19 @@ public class MainActivity extends AppCompatActivity {
                         c4 = digito4 & oct4;
                         net.setText(c1 + " ." + c2 + " ." + c3 + " ." + c4);
 
-                        oct1 = ~oct1;
-                        oct2 = ~oct2;
-                        oct3 = ~oct3;
-                        oct4 = ~oct4;
+                        brod_1 = ~oct1 & 0xff;
+                        brod_2 = ~oct2 & 0xff;
+                        brod_3 = ~oct3 & 0xff;
+                        brod_4 = ~oct4 & 0xff;
+                        System.out.println(brod_4);
 
-                        c1 = digito1 | oct1;
-                        c2 = digito2 | oct2;
-                        c3 = digito3 | oct3;
-                        c4 = digito4 | oct4;
-                        broadcast.setText(c1 + " ." + c2 + " ." + c3 + " ." + 255);
+                        c1 = digito1 | brod_1;
+                        c2 = digito2 | brod_2;
+                        c3 = digito3 | brod_3;
+                        c4 = digito4 | brod_4;
+                        broadcast.setText(c1 + " ." + c2 + " ." + c3 + " ." + c4);
+                        red_number.setText(digito1+". "+digito2);
+                        host_number.setText(digito3+" ."+digito4);
                         }
                     }
 

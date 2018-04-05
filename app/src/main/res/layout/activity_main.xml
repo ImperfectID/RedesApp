@@ -129,6 +129,61 @@
         android:layout_below="@id/broadcast"
         android:layout_alignLeft="@id/broadcast"/>
 
+    <TextView
+        android:id="@+id/host_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Host:"
+        android:textSize="20sp"
+        android:layout_below="@id/broadcast_text"
+        android:layout_alignLeft="@id/broadcast_text"
+        />
+
+    <TextView
+        android:id="@+id/host_text"
+        android:layout_width="160dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/host_view"
+        android:layout_alignLeft="@id/host_view"/>
+
+    <TextView
+        android:id="@+id/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red:"
+        android:textSize="20sp"
+        android:layout_below="@id/host_text"
+        android:layout_alignLeft="@id/host_text"
+        />
+
+    <TextView
+        android:id="@+id/red_text"
+        android:layout_width="160dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/red"
+        android:layout_alignLeft="@id/red"/>
+
+    <TextView
+        android:id="@+id/cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad de IP utilizables:"
+        android:textSize="20sp"
+        android:layout_below="@id/red_text"
+        android:layout_alignLeft="@id/red_text"
+        />
+
+    <TextView
+        android:id="@+id/cantidad_text"
+        android:layout_width="160dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cantidad"
+        android:layout_alignLeft="@id/cantidad"/>
+
+
 
 
 </RelativeLayout>
