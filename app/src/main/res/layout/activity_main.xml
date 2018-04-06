@@ -11,8 +11,7 @@
         android:layout_height="wrap_content"
         android:text="Introduzca la direccion de red: "
         android:textSize="15sp"
-        android:layout_margin="2dp"
-        />
+        android:layout_margin="2dp" />
 
     <EditText
         android:id="@+id/primer"
@@ -20,8 +19,8 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:maxLength="3"
-        android:maxLines="1"
-        />
+        android:maxLines="1"/>
+
     <TextView
         android:id="@+id/point1"
         android:layout_width="wrap_content"
@@ -29,8 +28,7 @@
         android:text="."
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/primer"
-        android:layout_alignBaseline="@id/primer"
-        />
+        android:layout_alignBaseline="@id/primer" />
 
     <EditText
         android:id="@+id/segundo"
@@ -49,8 +47,7 @@
         android:text="."
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/segundo"
-        android:layout_alignBaseline="@id/segundo"
-        />
+        android:layout_alignBaseline="@id/segundo"/>
 
     <EditText
         android:id="@+id/tercer"
@@ -69,8 +66,8 @@
         android:text="."
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/tercer"
-        android:layout_alignBaseline="@id/tercer"
-        />
+        android:layout_alignBaseline="@id/tercer" />
+
     <EditText
         android:id="@+id/cuarto"
         android:layout_margin="10dp"
@@ -81,7 +78,6 @@
         android:maxLength="3"
         android:maxLines="1"/>
 
-
     <EditText
         android:id="@+id/mascara"
         android:layout_width="50dp"
@@ -89,14 +85,13 @@
         android:maxLength="3"
         android:layout_toRightOf="@id/cuarto"
         android:layout_alignBaseline="@id/cuarto"
-        android:maxLines="1"
-        />
+        android:maxLines="1"/>
 
     <TextView
         android:id="@+id/text_net_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Net ID:"
+        android:text="@string/net_id"
         android:textSize="20sp"
         android:layout_below="@id/primer"
         android:layout_alignLeft="@id/primer"
@@ -117,7 +112,7 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:layout_below="@id/net_id"
-        android:text="Broadcast: "
+        android:text="@string/broadcast"
         android:layout_alignLeft="@id/net_id"
         />
 
@@ -133,7 +128,7 @@
         android:id="@+id/host_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Host:"
+        android:text="@string/host"
         android:textSize="20sp"
         android:layout_below="@id/broadcast_text"
         android:layout_alignLeft="@id/broadcast_text"
@@ -151,7 +146,7 @@
         android:id="@+id/red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Red:"
+        android:text="@string/red"
         android:textSize="20sp"
         android:layout_below="@id/host_text"
         android:layout_alignLeft="@id/host_text"
@@ -169,7 +164,7 @@
         android:id="@+id/cantidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cantidad de IP utilizables:"
+        android:text="@string/cantidad_de_ip_utilizables"
         android:textSize="20sp"
         android:layout_below="@id/red_text"
         android:layout_alignLeft="@id/red_text"
@@ -182,9 +177,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/cantidad"
         android:layout_alignLeft="@id/cantidad"/>
-
-
-
 
 </RelativeLayout>
 

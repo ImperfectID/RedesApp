@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Calculadora IP</string>
+    <string name="net_id">Net ID:</string>
+    <string name="broadcast">Broadcast:</string>
+    <string name="host">Host:</string>
+    <string name="red">Red:</string>
+    <string name="cantidad_de_ip_utilizables">Cantidad de IP utilizables:</string>
 </resources>
